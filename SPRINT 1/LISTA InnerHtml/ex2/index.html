@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner HTML</title>
+</head>
+<body>
+    <div>
+        <input id="VotosA" placeholder="Votos no candidato a">
+        <input id="VotosB" placeholder="Votos no candidato b">
+        <input id="VotosBrancos" placeholder="Votos em Branco">
+        <input id="VotosNulos" placeholder="Votos nulos">
+        <button onclick="CalcularResultado()">Resultado da eleição</button>
+    </div>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    function CalcularResultado(){
+        var a = Number(VotosA.value)
+        var b = Number(VotosB.value)
+        var branco = Number(VotosBrancos.value)
+        var nulo = Number(VotosNulos.value)
+        var invalido = branco + nulo
+
+        var total = a + b + branco + nulo
+
+        resultado.innerHTML = `
+        Total de votos: ${total}
+        <br>
+        Candidato A: ${a * 100 / total}% (${a} votos)  
+        <br>
+        Candidato B: ${b * 100 / total}% (${b} votos)  
+        <br>
+        Inválidos: ${invalido * 100 / total}% (${invalido} votos)  
+        `
+    }
+</script>

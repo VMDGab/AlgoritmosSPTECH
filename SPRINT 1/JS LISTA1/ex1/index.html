@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <div class="content">
+        <input id="CidadeNatal" class="input" placeholder="Digite sua cidade natal.">
+
+        <input id="AnoNasc" class="input" placeholder="Digite seu ano de nascimento.">
+
+        <button class="button" onclick="userData()">Cadastrar</button>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    function userData(){
+        alert('Você nasceu na cidade de ' + CidadeNatal.value + ' em ' + AnoNasc.value)
+    }
+</script>

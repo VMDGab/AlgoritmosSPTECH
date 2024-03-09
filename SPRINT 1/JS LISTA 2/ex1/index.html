@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+</head>
+<body>
+    <div class="content">
+        <input id="Idade" placeholder="Digite sua idade">
+        <button value="homem" id="menButton" onclick="retiredMen()">Aposentadoria Homem</button>
+        <button value="mulher" id="womanButton" onclick="retiredWoman()">Aposentadoria Mulher</button>   
+    </div>
+</body>
+</html>
+
+<script>
+    function retiredMen(){
+        var men = menButton.value
+        var timeToRetired = 70 - Number(Idade.value)
+        alert(`Faltam ${timeToRetired} anos para você se aposentar`)
+      }
+      function retiredWoman(){
+        var woman = womanButton.value
+        var timeToRetired = 60 - Number(Idade.value)
+        alert(`Faltam ${timeToRetired} anos para você se aposentar`)
+      }
+</script> 

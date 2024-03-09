@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        Digite a quantidade de chocolates comprados
+        <input id="qtdChocolates">
+        <br>
+        <button onclick="CalcularCompra()">Avaliar aluno</button>
+    </div>
+</body>
+
+</html>
+
+<script>
+    function CalcularCompra() {
+        var chocolates = Number(qtdChocolates.value)
+
+        if (chocolates > 12) {
+            var valor = 2.5
+        } else {
+            var valor = 3
+        }
+
+        var compra = chocolates * valor
+        alert(`O valor da sua compra foi de ${compra}`)
+    }
+</script>

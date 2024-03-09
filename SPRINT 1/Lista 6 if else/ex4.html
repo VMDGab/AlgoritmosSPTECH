@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Digite a frequencia do aluno
+        <input id="frequenciaAluno">
+        <br>
+        <button onclick="Avaliar()">Analisar frequencia</button>
+    </div>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    function Avaliar(){
+        var frequencia = Number(frequenciaAluno.value)
+        if(frequencia < 50){
+            resultado.innerHTML = `<img src="https://media.licdn.com/dms/image/C4E12AQFaXoYLA-K3WQ/article-cover_image-shrink_600_2000/0/1608661122294?e=2147483647&v=beta&t=f2JCEn5BAebj5Kp9GkK6TEZaS0uSPgyUgKPUv7jZqLM">"`
+        }else{
+            resultado.innerHTML = `<img src="https://img.freepik.com/fotos-premium/leitura-do-homem-estudioso_13339-291102.jpg">"`
+        }
+    }
+</script>

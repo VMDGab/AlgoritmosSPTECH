@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner HTML</title>
+</head>
+<body>
+    <div>
+        <input id="vlrpassagem" placeholder="Informe o valor da passagem de ônibus">
+        <input id="qtdviagens" placeholder="Informe a quantidade de viagens mensal">
+        <input id="distance" placeholder="Informe a distância do seu trabalho até sua casa">
+
+        <button onclick="CalcularVT()">Calcular VT</button>
+    </div>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    function CalcularVT(){
+        var bus = Number(qtdviagens.value * .9)
+        var appTravel = Number(qtdviagens.value * .1)
+        var busCost = bus * Number(vlrpassagem.value)
+        var distanceCost = .75 * (distance.value)
+        var appTravelCost = appTravel * distanceCost
+
+        var cost = (busCost + appTravelCost)
+
+        resultado.innerHTML = ` Você vai gastar R$${cost} por mês com transporte. `
+    }
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <div>
+        <input id="refri" placeholder="Informe quantas latas de refirgerante ingere diariamente">
+        <button onclick="CalcularDiabete()">Quantos refris</button>
+    </div>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    function CalcularDiabete(){
+        var qtdrefri = Number(refri.value) * 365
+        resultado.innerHTML = `Você ingere ${qtdrefri} latas de refri por ano`
+
+        if(qtdrefri >= 500){
+            resultado.innerHTML += `<br>Cuidado com a diabete!`
+        }
+    }
+</script>

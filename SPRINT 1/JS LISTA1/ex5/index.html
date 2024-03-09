@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <div class="content">
+        <input id= "NomePet" class="input" placeholder="Digite o nome do seu pet.">
+        <input value="" id="CountInput" type="hidden">
+
+        <button id="button1" onclick="calcularPet()">Ver informações do pet</button>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+        function calcularPet(){
+            if(NomePet.value == ''){
+                return(
+                    alert('Informe o nome do seu pet')
+                )
+            }
+            else{
+                   CountInput.value = CountInput.value + 'I';
+            infoPet(); 
+            }
+       
+        }
+       
+        function infoPet() {
+            alert('Esse é o pet ' + CountInput.value +  ' seu nome é ' + NomePet.value)
+        }
+
+     
+</script>
+

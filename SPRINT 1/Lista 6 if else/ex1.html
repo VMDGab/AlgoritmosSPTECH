@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Digite seu nome
+        <input id="nome">
+        <br>
+        Digite sua idade
+        <input id="idade">
+        <br>
+        <button onclick="Avaliar()">Avaliar aluno</button>
+    </div>
+</body>
+</html>
+
+<script>
+    function Avaliar(){
+        var name = nome.value
+        var age = Number(idade.value)
+
+        if(age >= 18){
+            alert(`${name} vamos tirar a CNH?`)
+        } else{
+            alert(`${name} vai jogar Playstation!`)
+        }
+    }
+
+</script>

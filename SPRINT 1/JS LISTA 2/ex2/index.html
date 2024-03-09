@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio</title>
+</head>
+<body>
+    <div>
+        <input id="VlPizza" placeholder="Informe o valor da pizza">
+        <input id="NmAmigos" placeholder="Informe a quantidade de amigos">
+        <button onclick="CalcularMedia()">#lovePizza</button>
+    </div>
+</body>
+</html>
+
+<script>
+    function CalcularMedia(){
+        var valor = Number(VlPizza.value)
+        var amigos = Number(NmAmigos.value)
+
+        var resultado = valor / amigos
+
+        alert(`Cada um dos ${amigos} vai pagar R$${resultado} reais`)
+    }
+</script>

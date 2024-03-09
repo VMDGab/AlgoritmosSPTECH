@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Digite a primeira nota 
+        <input id="n1">
+        <br>
+        Digite a segunda nota
+        <input id="n2">
+        <br>
+        <button onclick="Avaliar()">Verificar situação</button>
+    </div>
+</body>
+</html>
+
+<script>
+    function Avaliar(){
+        var nota1 = Number(n1.value)
+        var nota2 = Number(n2.value)
+
+        var media = (nota1 + nota2) / 2
+
+        if(media >= 6){
+            alert("Parabéns, aprovado!")
+        }else{
+            alert('Tente outra vez...')
+        }
+    }
+</script>

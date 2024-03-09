@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input {
+        width: 300px;
+    }
+</style>
+
+<body>
+    <div class="content">
+        Nome do passageiro:
+        <input id="nome" class="input">
+        Distância para o destino em km
+        <input id="distancia" class="input">
+        Bandeira da corrida (1, 2 ou 3)
+        <input id="bandeira" class="input" type="number">
+        Hora da corrida
+        <input id="hora" class="input" type="number">
+    </div>
+
+    <button onclick="CalcularCorrida()">Calcular corrida</button>
+
+    <p id="resultado"></p>
+</body>
+
+</html>
+
+<script>
+    function CalcularCorrida() {
+        var name = nome.value
+        var distance = Number(distancia.value)
+        var flag = Number(bandeira.value)
+        var time = Number(hora.value)
+
+        var defaultCost = distance * 1.25
+        var periodo = 3
+
+        if (time >= 0) {
+            if (time <= 6) {
+                periodo = 1
+            }
+        }
+
+        if (time >= 7) {
+            if (time <= 12) {
+                periodo = 2
+            }
+
+
+            if (flag == 1) {
+                if (periodo == 1) {
+                    resultado.innerHTML = `Olá ${name} ! Sua corrida será na bandeira ${flag}, percorrerá ${distance} 
+                     e o total da corrida será de ${defaultCost + (defaultCost * .05)}`
+
+                }
+                if (periodo == 2) {
+                    resultado.innerHTML = `Olá ${name} ! Sua corrida será na bandeira ${flag}, percorrerá ${distance} 
+                     e o total da corrida será de ${defaultCost + (defaultCost * .1)}`
+                }
+
+                resultado.innerHTML = `Olá ${name} ! Sua corrida será na bandeira ${flag}, percorrerá ${distance} 
+                 e o total da corrida será de ${defaultCost + (defaultCost * .15)}`
+
+            }
+
+
+            if (flag == 2) {
+                if (periodo == 1) {
+                    resultado.innerHTML = `Olá ${name} ! Sua corrida será na bandeira ${flag}, percorrerá ${distance}km
+                     e o total da corrida será de ${defaultCost + (defaultCost * .1)}`
+                }
+
+
+                if (periodo == 2) {
+                    resultado.innerHTML = `Olá ${name} ! Sua corrida será na bandeira ${flag}, percorrerá ${distance} 
+                 e o total da corrida será de ${defaultCost + (defaultCost * .2)}`
+                }
+
+                resultado.innerHTML = `Olá ${name} ! Sua corrida será na bandeira ${flag}, percorrerá ${distance} 
+            e o total da corrida será de ${defaultCost + (defaultCost * .3)}`
+            }
+        }
+
+        if (flag == 3) {
+            if (periodo == 1) {
+                resultado.innerHTML = `Olá ${name} ! Sua corrida será na bandeira ${flag}, percorrerá ${distance} 
+                 e o total da corrida será de ${defaultCost + (defaultCost * .15)}`
+            }
+
+            if (periodo == 2) {
+                resultado.innerHTML = `Olá ${name} ! Sua corrida será na bandeira ${flag}, percorrerá ${distance} 
+                 e o total da corrida será de ${defaultCost + (defaultCost * .3)}`
+            }
+
+            resultado.innerHTML = `Olá ${name} ! Sua corrida será na bandeira ${flag}, percorrerá ${distance} 
+         e o total da corrida será de ${defaultCost + (defaultCost * .45)}`
+
+        }
+    }
+</script>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input {
+        width: 300px;
+    }
+</style>
+
+<body>
+    <div class="content">
+        Nome do passageiro:
+        <input id="nome" class="input">
+        Distância para o destino em km
+        <input id="distancia" class="input">
+        Bandeira da corrida (1, 2 ou 3)
+        <input id="bandeira" class="input" type="number">
+        Hora da corrida
+        <input id="hora" class="input" type="number">
+    </div>
+
+    <button onclick="CalcularCorrida()">Calcular corrida</button>
+
+    <p id="resultado"></p>
+</body>
+
+</html>
+
+<script>
+    function CalcularCorrida() {
+        var name = nome.value
+        var distance = Number(distancia.value)
+        var flag = Number(bandeira.value)
+        var time = Number(hora.value)
+
+        var defaultCost = distance * 1.25
+
+        
+        
+    }
+</script>

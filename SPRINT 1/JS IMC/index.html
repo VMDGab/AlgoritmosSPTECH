@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Índice de massa corporal</title>
+</head>
+<style>
+
+body{
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+    background-color: #d7d7d7;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #413f4b;
+    height: 350px;
+    width: 500px;
+
+    border-radius: 20px;
+    box-shadow: 0 20px 40px 0 #3e3c48;
+
+}
+
+.input{
+    height: 40px;
+    width: 300px; 
+
+    border-radius: 10px;
+    border: none;
+    
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+.ButtonStyle{
+    height: 40px;
+    width: 200px; 
+    border-radius: 10px;
+    border: none;
+    background-color: #cecece;
+    }
+.ButtonStyle:hover{
+    background-color: #c6c3d3;
+}
+</style>
+<body>
+    <div class="content">
+        <input id="nome" class="input" placeholder="Informe seu nome">
+        <input id="peso" class="input" placeholder="Digite seu peso em kg">
+        <input id="altura" class="input" placeholder="Digite sua altura em metros">
+        <button class="ButtonStyle" onclick="calcularImc()">Calcular IMC</button>
+    </div>
+</body>
+
+</html>
+
+<script>
+    function calcularImc() {
+        var name = nome.value
+        var weight = Number(peso.value) 
+        var height = Number(altura.value) 
+
+        var imc = weight / (height * height)
+
+        var pes = height * 3.28084
+        var onca = weight * 35.274
+
+        var alternativeIMC = onca / (pes * pes)
+        alert(`${name} seu IMC é ${imc}, sua altura em pés é ${pes}, o seu peso em onças é ${onca} e seu IMC alternativo é ${alternativeIMC}`)
+}
+</script>
